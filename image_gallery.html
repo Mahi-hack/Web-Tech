@@ -1,0 +1,36 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Image Gallery</title>
+    <style>
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .gallery img {
+        width: 200px;
+        height: 150px;
+        margin: 10px;
+        border: 1px solid blue;
+        border-radius: 10px;
+        box-shadow: 0 0 10px black;
+    }
+    
+    .gallery img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }</style>
+</head>
+<body>
+    <div class="gallery">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyAVJU4pDadoZ46dhgdaNedg_KDo8OF_HrTIq50H67N4QplPIJJeIkuMU47g&s" alt="Image 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6vV4Q2S-_bEwQjCyr9xqlwLuOpKdPw4E8KQLBxC8UG55cSa83S0lSWD_s8A&s" alt="Image 2">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr4EY8DJ9EbKgvEVE-g_sSHz9m2cQBWPICjLz9CxSmR_d-8Rb36aMPRJsodg&s" alt="Image 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeQwfGUe6XryJyxm6WL_gR2gD6ztfmX9yFDBeOPTIrOd6k-EUPOK3uRqYMHQ&s" alt="Image 3">
+    </div>
+</body>
+</html>

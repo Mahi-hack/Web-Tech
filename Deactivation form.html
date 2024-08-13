@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Account Deactivation Form</title>
+</head>
+<body>
+    <fieldset>
+    <h1>Account Deactivation Request</h1>
+    <form action="/submit_deactivation" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="phone">Phone Number (Optional):</label><br>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <label for="reason">Reason for Deactivation:</label><br>
+        <input type="radio" id="break" name="reason" value="Need a break" required>
+        <label for="break">Need a break</label><br>
+
+        <input type="radio" id="privacy" name="reason" value="Privacy concerns" required>
+        <label for="privacy">Privacy concerns</label><br>
+
+        <input type="radio" id="second_account" name="reason" value="Created a second account" required>
+        <label for="second_account">Created a second account</label><br>
+
+        <input type="radio" id="content_issues" name="reason" value="Issues with content" required>
+        <label for="content_issues">Issues with content</label><br>
+
+        <input type="radio" id="other" name="reason" value="Other" required>
+        <label for="other">Other (Please specify):</label><br>
+        <input type="text" id="other_reason" name="other_reason"><br><br>
+
+        <label for="comments">Additional Comments (Optional):</label><br>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br><br>
+
+        <label for="confirmation">Confirmation:</label><br>
+        <input type="checkbox" id="confirmation" name="confirmation" required>
+        <label for="confirmation">I confirm that I want to deactivate my Instagram account and understand that this action can be reversed by reactivating the account in the future.</label><br><br>
+
+        <label for="signature">Signature:</label><br>
+        <input type="text" id="signature" name="signature" required><br><br>
+
+        <label for="date">Date:</label><br>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    </fieldset>
+</body>
+</html>

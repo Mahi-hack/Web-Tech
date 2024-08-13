@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Drawing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Canvas Shapes</h1>
+    </header>
+
+    <main>
+        <canvas id="myCanvas" width="600" height="400"></canvas>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Canvas Shapes</p>
+    </footer>
+
+    <script>
+        // Get the canvas element and its context
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Draw a rectangle
+        ctx.fillStyle = 'blue';
+        ctx.fillRect(50, 50, 200, 100);
+
+        // Draw a square
+        ctx.fillStyle = 'green';
+        ctx.fillRect(300, 50, 100, 100);
+
+        // Draw another rectangle with a different color
+        ctx.fillStyle = 'red';
+        ctx.fillRect(100, 200, 150, 75);
+
+        // Draw another square
+        ctx.fillStyle = 'purple';
+        ctx.fillRect(400, 200, 100, 100);
+    </script>
+</body>
+</html>
