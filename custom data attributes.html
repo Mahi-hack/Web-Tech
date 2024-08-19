@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Person and Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+        .info {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        .info:hover .details {
+            display: block;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Favorites</h1>
+
+    <!-- Favorite Person Section -->
+    <div class="info" data-person="Ratan Tata" data-contribution="An Indian industrialist, philanthropist and former chairman of Tata Sons.">
+        <h2>Favorite Person</h2>
+        <p>Hover to reveal</p>
+        <div class="details">
+            <strong>Name:</strong> <span id="person-name"></span><br>
+            <strong>Contribution:</strong> <span id="person-contribution"></span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/35._ISC-Symposium-Ratan_N._Tata_in_der_Pause-HSGN_028-01812.JPG/330px-35._ISC-Symposium-Ratan_N._Tata_in_der_Pause-HSGN_028-01812.JPG">
+        </div>
+    </div>
+
+    <!-- Favorite Course Section -->
+    <div class="info" data-course="Artificial Intelligence" data-field="Computer Science">
+        <h2>Favorite Course</h2>
+        <p>Hover to reveal</p>
+        <div class="details">
+            <strong>Course Name:</strong> <span id="course-name"></span><br>
+            <strong>Field:</strong> <span id="course-field"></span>
+        </div>
+    </div>
+
+    <script>
+        // Display favorite person details
+        const personDiv = document.querySelector('.info[data-person]');
+        const personName = personDiv.getAttribute('data-person');
+        const personContribution = personDiv.getAttribute('data-contribution');
+
+        personDiv.querySelector('#person-name').textContent = personName;
+        personDiv.querySelector('#person-contribution').textContent = personContribution;
+
+        // Display favorite course details
+        const courseDiv = document.querySelector('.info[data-course]');
+        const courseName = courseDiv.getAttribute('data-course');
+        const courseField = courseDiv.getAttribute('data-field');
+
+        courseDiv.querySelector('#course-name').textContent = courseName;
+        courseDiv.querySelector('#course-field').textContent = courseField;
+    </script>
+
+</body>
+</html>
